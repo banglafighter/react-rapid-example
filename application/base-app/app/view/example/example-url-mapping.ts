@@ -16,11 +16,11 @@ export default class ExampleUrlMapping {
     };
 
     private static privateUrlMappings(privateLayoutInfo: RapidLayoutInfoData): RapidLayoutInfoData {
-        privateLayoutInfo.addPageInstance(this.ui.index, IndexView);
         return privateLayoutInfo;
     }
 
     private static publicUrlMappings(publicLayoutInfo: RapidLayoutInfoData): RapidLayoutInfoData {
+        publicLayoutInfo.addPageInstance(this.ui.index, IndexView);
         return publicLayoutInfo;
     }
 
