@@ -1,4 +1,5 @@
 import {RapidLayoutRenderer, RapidReactComponent, React} from 'react-rapid-app';
+import Bootstrap from "react-rapid-bootstrap/boot/react/Bootstrap";
 
 
 interface Props {
@@ -14,11 +15,13 @@ export default class PrivateLayout extends RapidReactComponent<Props, any> {
         const {component, route, appConfig, additionalData} = this.props;
         return (
             <>
-                <RapidLayoutRenderer
-                    route={route}
-                    appConfig={appConfig}
-                    component={component}
-                    additionalData={additionalData}/>
+                <Bootstrap>
+                    <RapidLayoutRenderer
+                        route={route}
+                        appConfig={appConfig}
+                        component={component}
+                        additionalData={additionalData}/>
+                </Bootstrap>
             </>
         );
     }
