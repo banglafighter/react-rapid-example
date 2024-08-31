@@ -8,7 +8,8 @@
   },
   "scripts": {
     "start-app": "webpack-dev-server --env pfen=local",
-    "dev-build": "webpack --mode=production --env pfen=dev && firebase deploy -P dev",
+    "dev-build": "webpack --mode=production --env pfen=dev",
+    "compile-dev": "webpack --mode=production --env pfen=dev --watch",
     "prod-build": "webpack --mode=production --env pfen=prod && firebase deploy -P prod"
   },
   "eslintConfig": {
